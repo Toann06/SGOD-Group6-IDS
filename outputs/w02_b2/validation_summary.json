@@ -1,0 +1,143 @@
+{
+  "project": "SGOD-P1-W02-B2",
+  "generated_at": "2026-11-24",
+  "scope": "STREAMING MULTI-CSV VALIDATION & TEST SUITE VERIFICATION",
+  "environment": {
+    "os": "Windows 11",
+    "python": "3.10.11",
+    "pytest": "9.2.0",
+    "pandas": "2.3.3",
+    "numpy": "2.2.6",
+    "scikit_learn": "1.7.2"
+  },
+  "unit_and_regression_tests": {
+    "total_collected": 71,
+    "passed": 71,
+    "failed": 0,
+    "skipped": 0,
+    "pass_rate": "100%",
+    "execution_time_seconds": 1.87,
+    "log_file": "outputs/w02_b2/test_results.txt"
+  },
+  "leakage_status_definitions": {
+    "PASS": "All checks verified without data leakage or temporal inversion",
+    "PASS_PARTIAL": "Core checks passed (observation identity, temporal order, label exclusion), but secondary checks (scaler or window boundary) are NOT_VERIFIED due to missing optional inputs",
+    "FAIL": "Critical data leakage, temporal inversion, or label leakage detected",
+    "NOT_VERIFIED": "Empty DataFrame or check omitted due to lack of required context"
+  },
+  "shared_tail_verification": {
+    "expected_rows_per_file": 891068,
+    "timestamp_range": [
+      1478200727.41947,
+      1478201209.058944
+    ],
+    "normalized_sha256": "224ee335210e7f733e06e6ce6ec067060e00db8d4c18d823bf11317778989050",
+    "files_confirmed_identical": [
+      "DoS_dataset.csv",
+      "Fuzzy_dataset.csv",
+      "gear_dataset.csv",
+      "RPM_dataset.csv"
+    ],
+    "policy_applied": "exclude",
+    "temporal_inversion_status": "RESOLVED (Train max <= Test min: True)"
+  },
+  "multi_csv_streaming_audit": {
+    "method": "50,000 rows streamed per CSV before shared-tail range; 100 rows TXT normal run",
+    "cross_file_observation_overlap": false,
+    "cross_file_nan_payload_matching": "verified via .fillna('__NAN__') normalized tuple sets",
+    "datasets": {
+      "DoS_dataset.csv": {
+        "train_rows": 32794,
+        "val_rows": 7725,
+        "test_rows": 9015,
+        "test_attack_count": 1889,
+        "test_attack_ratio": "20.95%",
+        "temporal_order": true,
+        "window_leakage": false,
+        "scaler_train_only": true,
+        "leakage_status": "PASS"
+      },
+      "Fuzzy_dataset.csv": {
+        "train_rows": 31783,
+        "val_rows": 8540,
+        "test_rows": 9361,
+        "test_attack_count": 1488,
+        "test_attack_ratio": "15.90%",
+        "temporal_order": true,
+        "window_leakage": false,
+        "scaler_train_only": true,
+        "leakage_status": "PASS"
+      },
+      "gear_dataset.csv": {
+        "train_rows": 34571,
+        "val_rows": 7017,
+        "test_rows": 7480,
+        "test_attack_count": 1557,
+        "test_attack_ratio": "20.82%",
+        "temporal_order": true,
+        "window_leakage": false,
+        "scaler_train_only": true,
+        "leakage_status": "PASS"
+      },
+      "RPM_dataset.csv": {
+        "train_rows": 35024,
+        "val_rows": 6878,
+        "test_rows": 7202,
+        "test_attack_count": 1665,
+        "test_attack_ratio": "23.12%",
+        "temporal_order": true,
+        "window_leakage": false,
+        "scaler_train_only": true,
+        "leakage_status": "PASS"
+      }
+    },
+    "test_set_attack_evaluation_adequacy": "CONFIRMED_ADEQUATE (1,488 to 1,889 attack records per test split, avoiding statistical sparsity)"
+  },
+  "data_leakage_assessment": {
+    "observation_identity_overlap": {
+      "status": "PASS",
+      "shared_records_count": 0,
+      "method": "source_file + source_line exact intersection with NaN-safe string normalization"
+    },
+    "temporal_chronological_order": {
+      "status": "PASS",
+      "temporal_inversion_detected": false,
+      "train_max_strictly_before_val_min": true,
+      "val_max_strictly_before_test_min": true
+    },
+    "window_boundary_leakage": {
+      "status": "PASS",
+      "purge_gap_fraction": 0.01,
+      "cross_split_windows_detected": false,
+      "not_verified_when_combined_df_missing": true
+    },
+    "content_hash_overlap": {
+      "status": "INFO_EXPECTED",
+      "finding": "CAN broadcast telemetry naturally repeats payload across time (periodic ECU transmission)",
+      "is_leakage": false
+    },
+    "label_leakage": {
+      "status": "PASS",
+      "forbidden_columns_in_features": false,
+      "features_count": 23
+    },
+    "scaler_leakage": {
+      "status": "PASS",
+      "fitted_on_train_only": true,
+      "not_verified_when_scaler_missing": true
+    }
+  },
+  "overall_verification_status": "PASS_CONDITIONAL",
+  "conditions_for_final_signoff": [
+    "Reviewer approval of DEC-002: shared-tail exclusion policy (shared_tail_policy='exclude')",
+    "Reviewer approval of DEC-005: label_provenance and segment_id",
+    "Reviewer approval of DEC-007: Baseline-A (23 features) default configuration",
+    "Confirm remaining proposed decisions DEC-003/004/008/009 with relevant reviewers"
+  ],
+  "b1_segment_audit": {
+    "scope": "full parsed four CSVs; gap/tail equivalence only",
+    "parsed_rows": 16569475,
+    "passed": true,
+    "report": "outputs/w02_b2/b1_segment_audit.json"
+  }
+}

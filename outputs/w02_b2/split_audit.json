@@ -1,0 +1,59 @@
+{
+  "scope": "DoS first 10000 parsed rows only",
+  "split_statistics": {
+    "train": {
+      "rows": 6947,
+      "normal": 4051,
+      "attack": 2896,
+      "min_timestamp": 1478198376.389427,
+      "max_timestamp": 1478198380.748942
+    },
+    "val": {
+      "rows": 1397,
+      "normal": 649,
+      "attack": 748,
+      "min_timestamp": 1478198380.816378,
+      "max_timestamp": 1478198381.688246
+    },
+    "test": {
+      "rows": 1515,
+      "normal": 1512,
+      "attack": 3,
+      "min_timestamp": 1478198381.761832,
+      "max_timestamp": 1478198382.666866
+    },
+    "purged": {
+      "rows": 141,
+      "normal": 64,
+      "attack": 77,
+      "min_timestamp": 1478198380.754317,
+      "max_timestamp": 1478198381.756135
+    }
+  },
+  "pairwise_checks": {
+    "train_vs_val": {
+      "shared_observation_ids": 0,
+      "shared_content_hashes": 149,
+      "strict_temporal_order": true
+    },
+    "train_vs_test": {
+      "shared_observation_ids": 0,
+      "shared_content_hashes": 227,
+      "strict_temporal_order": true
+    },
+    "val_vs_test": {
+      "shared_observation_ids": 0,
+      "shared_content_hashes": 98,
+      "strict_temporal_order": true
+    }
+  },
+  "assessment": {
+    "observation_identity_disjoint": true,
+    "strict_temporal_order": true,
+    "test_attack_count": 3,
+    "test_attack_coverage_sufficient": false,
+    "full_dataset_leakage_verified": false,
+    "shared_tail_cross_file_verified": false,
+    "window_feature_leakage_verified": false
+  }
+}

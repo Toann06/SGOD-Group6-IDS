@@ -1,0 +1,155 @@
+{
+  "scope": "Multi-CSV streaming audit: 50,000 rows sampled per dataset (before shared-tail timestamp boundary). SAMPLE AUDIT \u2014 not full-dataset coverage.",
+  "sample_rows_per_csv": 50000,
+  "datasets": {
+    "DoS_dataset.csv": {
+      "sampled_rows": 50000,
+      "normal_count": 38580,
+      "attack_count": 11420,
+      "attack_ratio_pct": 22.84,
+      "timestamp_min": 1478198376.389427,
+      "timestamp_max": 1478198415.409813,
+      "attack_ts_min": 1478198377.185137,
+      "attack_ts_max": 1478198415.409813
+    },
+    "Fuzzy_dataset.csv": {
+      "sampled_rows": 50000,
+      "normal_count": 43915,
+      "attack_count": 6085,
+      "attack_ratio_pct": 12.17,
+      "timestamp_min": 1478195721.903877,
+      "timestamp_max": 1478195775.977888,
+      "attack_ts_min": 1478195722.775132,
+      "attack_ts_max": 1478195775.97765
+    },
+    "gear_dataset.csv": {
+      "sampled_rows": 50000,
+      "normal_count": 40848,
+      "attack_count": 9152,
+      "attack_ratio_pct": 18.3,
+      "timestamp_min": 1478193190.056566,
+      "timestamp_max": 1478193215.304085,
+      "attack_ts_min": 1478193191.268206,
+      "attack_ts_max": 1478193213.916658
+    },
+    "RPM_dataset.csv": {
+      "sampled_rows": 50000,
+      "normal_count": 40554,
+      "attack_count": 9446,
+      "attack_ratio_pct": 18.89,
+      "timestamp_min": 1478191030.045114,
+      "timestamp_max": 1478191054.845412,
+      "attack_ts_min": 1478191030.966732,
+      "attack_ts_max": 1478191053.773533
+    }
+  },
+  "split_analysis": {
+    "DoS_dataset.csv": {
+      "train_rows": 32794,
+      "train_attacks": 7998,
+      "val_rows": 7725,
+      "val_attacks": 1270,
+      "test_rows": 9015,
+      "test_attacks": 1889,
+      "purged_rows": 466,
+      "purged_attacks": 263,
+      "test_attack_coverage_sufficient": true,
+      "leakage_status": "PASS",
+      "leakage_passed": true,
+      "observation_leakage_detected": false,
+      "temporal_order_ordered": true,
+      "window_boundary_leakage": "False",
+      "scaler_check": "True",
+      "scaler_feature_used": "inter_arrival_time",
+      "unverified_checks": []
+    },
+    "Fuzzy_dataset.csv": {
+      "train_rows": 31783,
+      "train_attacks": 3457,
+      "val_rows": 8540,
+      "val_attacks": 1011,
+      "test_rows": 9361,
+      "test_attacks": 1488,
+      "purged_rows": 316,
+      "purged_attacks": 129,
+      "test_attack_coverage_sufficient": true,
+      "leakage_status": "PASS",
+      "leakage_passed": true,
+      "observation_leakage_detected": false,
+      "temporal_order_ordered": true,
+      "window_boundary_leakage": "False",
+      "scaler_check": "True",
+      "scaler_feature_used": "inter_arrival_time",
+      "unverified_checks": []
+    },
+    "gear_dataset.csv": {
+      "train_rows": 34571,
+      "train_attacks": 6764,
+      "val_rows": 7017,
+      "val_attacks": 683,
+      "test_rows": 7480,
+      "test_attacks": 1557,
+      "purged_rows": 932,
+      "purged_attacks": 148,
+      "test_attack_coverage_sufficient": true,
+      "leakage_status": "PASS",
+      "leakage_passed": true,
+      "observation_leakage_detected": false,
+      "temporal_order_ordered": true,
+      "window_boundary_leakage": "False",
+      "scaler_check": "True",
+      "scaler_feature_used": "inter_arrival_time",
+      "unverified_checks": []
+    },
+    "RPM_dataset.csv": {
+      "train_rows": 35024,
+      "train_attacks": 7080,
+      "val_rows": 6878,
+      "val_attacks": 547,
+      "test_rows": 7202,
+      "test_attacks": 1665,
+      "purged_rows": 896,
+      "purged_attacks": 154,
+      "test_attack_coverage_sufficient": true,
+      "leakage_status": "PASS",
+      "leakage_passed": true,
+      "observation_leakage_detected": false,
+      "temporal_order_ordered": true,
+      "window_boundary_leakage": "False",
+      "scaler_check": "True",
+      "scaler_feature_used": "inter_arrival_time",
+      "unverified_checks": []
+    }
+  },
+  "cross_file_overlap": {
+    "DoS_dataset.csv_vs_Fuzzy_dataset.csv": {
+      "overlap_detected": false,
+      "check_method": "primary: (source_file, source_line); secondary: exact (timestamp, can_id, dlc, payload) normalized tuple match with NaN sentinel '__NAN__'"
+    },
+    "DoS_dataset.csv_vs_gear_dataset.csv": {
+      "overlap_detected": false,
+      "check_method": "primary: (source_file, source_line); secondary: exact (timestamp, can_id, dlc, payload) normalized tuple match with NaN sentinel '__NAN__'"
+    },
+    "DoS_dataset.csv_vs_RPM_dataset.csv": {
+      "overlap_detected": false,
+      "check_method": "primary: (source_file, source_line); secondary: exact (timestamp, can_id, dlc, payload) normalized tuple match with NaN sentinel '__NAN__'"
+    },
+    "Fuzzy_dataset.csv_vs_gear_dataset.csv": {
+      "overlap_detected": false,
+      "check_method": "primary: (source_file, source_line); secondary: exact (timestamp, can_id, dlc, payload) normalized tuple match with NaN sentinel '__NAN__'"
+    },
+    "Fuzzy_dataset.csv_vs_RPM_dataset.csv": {
+      "overlap_detected": false,
+      "check_method": "primary: (source_file, source_line); secondary: exact (timestamp, can_id, dlc, payload) normalized tuple match with NaN sentinel '__NAN__'"
+    },
+    "gear_dataset.csv_vs_RPM_dataset.csv": {
+      "overlap_detected": false,
+      "check_method": "primary: (source_file, source_line); secondary: exact (timestamp, can_id, dlc, payload) normalized tuple match with NaN sentinel '__NAN__'"
+    }
+  },
+  "audit_notes": [
+    "Scaler verification uses real temporal feature pipeline (inter_arrival_time, rolling_mean_iat, rolling_std_iat, etc.), not synthetic diff(timestamp).",
+    "Window boundary leakage check uses combined_df with 'split' column present.",
+    "All 6 cross-file pairs checked (C(4,2)=6)."
+  ]
+}

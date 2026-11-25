@@ -1,0 +1,244 @@
+{
+  "scope": "SAMPLE VALIDATION: 2000 parsed rows per CSV; 50000 DoS rows for feature/split/leakage; NOT full dataset",
+  "datasets": {
+    "DoS_dataset.csv": {
+      "rows_read": 2000,
+      "columns": [
+        "timestamp",
+        "can_id",
+        "dlc",
+        "data_0",
+        "data_1",
+        "data_2",
+        "data_3",
+        "data_4",
+        "data_5",
+        "data_6",
+        "data_7",
+        "flag_raw",
+        "label",
+        "label_provenance",
+        "attack_type",
+        "source_file",
+        "source_line"
+      ],
+      "label_distribution_sample": {
+        "0": 1721,
+        "1": 279
+      },
+      "first_source_line": 0,
+      "readable": true
+    },
+    "Fuzzy_dataset.csv": {
+      "rows_read": 2000,
+      "columns": [
+        "timestamp",
+        "can_id",
+        "dlc",
+        "data_0",
+        "data_1",
+        "data_2",
+        "data_3",
+        "data_4",
+        "data_5",
+        "data_6",
+        "data_7",
+        "flag_raw",
+        "label",
+        "label_provenance",
+        "attack_type",
+        "source_file",
+        "source_line"
+      ],
+      "label_distribution_sample": {
+        "0": 1833,
+        "1": 167
+      },
+      "first_source_line": 0,
+      "readable": true
+    },
+    "gear_dataset.csv": {
+      "rows_read": 2000,
+      "columns": [
+        "timestamp",
+        "can_id",
+        "dlc",
+        "data_0",
+        "data_1",
+        "data_2",
+        "data_3",
+        "data_4",
+        "data_5",
+        "data_6",
+        "data_7",
+        "flag_raw",
+        "label",
+        "label_provenance",
+        "attack_type",
+        "source_file",
+        "source_line"
+      ],
+      "label_distribution_sample": {
+        "0": 2000
+      },
+      "first_source_line": 0,
+      "readable": true
+    },
+    "RPM_dataset.csv": {
+      "rows_read": 2000,
+      "columns": [
+        "timestamp",
+        "can_id",
+        "dlc",
+        "data_0",
+        "data_1",
+        "data_2",
+        "data_3",
+        "data_4",
+        "data_5",
+        "data_6",
+        "data_7",
+        "flag_raw",
+        "label",
+        "label_provenance",
+        "attack_type",
+        "source_file",
+        "source_line"
+      ],
+      "label_distribution_sample": {
+        "0": 1893,
+        "1": 107
+      },
+      "first_source_line": 0,
+      "readable": true
+    }
+  },
+  "feature_extraction": {
+    "source": "DoS_dataset.csv (50000 rows)",
+    "frame_shape": [
+      50000,
+      18
+    ],
+    "temporal_shape": [
+      50000,
+      5
+    ],
+    "total_features": 23,
+    "no_label_leakage": true,
+    "frame_columns": [
+      "can_id_int",
+      "dlc",
+      "data_0",
+      "data_1",
+      "data_2",
+      "data_3",
+      "data_4",
+      "data_5",
+      "data_6",
+      "data_7",
+      "payload_mask_0",
+      "payload_mask_1",
+      "payload_mask_2",
+      "payload_mask_3",
+      "payload_mask_4",
+      "payload_mask_5",
+      "payload_mask_6",
+      "payload_mask_7"
+    ],
+    "temporal_columns": [
+      "global_iat",
+      "inter_arrival_time",
+      "rolling_mean_iat",
+      "rolling_std_iat",
+      "can_id_freq_1s"
+    ]
+  },
+  "split_test": {
+    "source": "DoS_dataset.csv (50000 rows)",
+    "split_counts": {
+      "train": 32794,
+      "test": 9015,
+      "val": 7725,
+      "purged": 466
+    },
+    "no_hash_overlap": false,
+    "shared_tail_in_train_only": true,
+    "has_purged": true,
+    "attack_coverage_ok": true,
+    "attack_counts_in_val_test": {
+      "val": 1270,
+      "test": 1889
+    },
+    "size_dist": {
+      "train": {
+        "count": 32794,
+        "frac": 0.6559
+      },
+      "purged": {
+        "count": 466,
+        "frac": 0.0093
+      },
+      "val": {
+        "count": 7725,
+        "frac": 0.1545
+      },
+      "test": {
+        "count": 9015,
+        "frac": 0.1803
+      }
+    }
+  },
+  "leakage_check": {
+    "observation_leakage_train_test": false,
+    "observation_leakage_train_val": false,
+    "observation_leakage_val_test": false,
+    "temporal_leakage_train_test": false,
+    "temporal_leakage_train_val": false,
+    "temporal_order": {
+      "train_val_ordered": true,
+      "val_test_ordered": true,
+      "train_test_ordered": true,
+      "train_contains_future_data": false,
+      "all_ordered": true
+    },
+    "window_boundary_leakage": false,
+    "hash_overlap_train_test": true,
+    "hash_overlap_train_val": true,
+    "hash_overlap_val_test": true,
+    "scaler_fitted_on_train_only": true,
+    "status": "PASS",
+    "passed": true,
+    "any_leakage": false,
+    "unverified_checks": [],
+    "is_fully_verified": true,
+    "notes": [
+      "Content hash overlap is expected in CAN networks due to periodic message broadcasts.",
+      "Observation identity overlap and chronological ordering are the primary determinants of leakage."
+    ],
+    "checks": {
+      "observation_leakage_train_test": false,
+      "observation_leakage_train_val": false,
+      "observation_leakage_val_test": false,
+      "temporal_leakage_train_test": false,
+      "temporal_leakage_train_val": false,
+      "temporal_order": {
+        "train_val_ordered": true,
+        "val_test_ordered": true,
+        "train_test_ordered": true,
+        "train_contains_future_data": false,
+        "all_ordered": true
+      },
+      "window_boundary_leakage": false,
+      "hash_overlap_train_test": true,
+      "hash_overlap_train_val": true,
+      "hash_overlap_val_test": true,
+      "scaler_fitted_on_train_only": true
+    }
+  },
+  "txt_parsing": {
+    "lines_read": 100,
+    "valid": 100,
+    "malformed": 0,
+    "sample_line": "Timestamp: ... ID: ... DLC: ... bytes..."
+  }
+}

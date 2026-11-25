@@ -1,0 +1,44 @@
+{
+  "scope": "Full shared-tail range, parsed observations",
+  "files": {
+    "DoS_dataset.csv": {
+      "rows": 891068,
+      "sha256": "224ee335210e7f733e06e6ce6ec067060e00db8d4c18d823bf11317778989050",
+      "first_source_line": 2774703,
+      "last_source_line": 3665770,
+      "first_timestamp": 1478200727.41947,
+      "last_timestamp": 1478201209.058944
+    },
+    "Fuzzy_dataset.csv": {
+      "rows": 891068,
+      "sha256": "224ee335210e7f733e06e6ce6ec067060e00db8d4c18d823bf11317778989050",
+      "first_source_line": 2947792,
+      "last_source_line": 3838859,
+      "first_timestamp": 1478200727.41947,
+      "last_timestamp": 1478201209.058944
+    },
+    "gear_dataset.csv": {
+      "rows": 891068,
+      "sha256": "224ee335210e7f733e06e6ce6ec067060e00db8d4c18d823bf11317778989050",
+      "first_source_line": 3552074,
+      "last_source_line": 4443141,
+      "first_timestamp": 1478200727.41947,
+      "last_timestamp": 1478201209.058944
+    },
+    "RPM_dataset.csv": {
+      "rows": 891068,
+      "sha256": "224ee335210e7f733e06e6ce6ec067060e00db8d4c18d823bf11317778989050",
+      "first_source_line": 3730634,
+      "last_source_line": 4621701,
+      "first_timestamp": 1478200727.41947,
+      "last_timestamp": 1478201209.058944
+    }
+  },
+  "verification": {
+    "all_counts_equal": true,
+    "all_digests_equal": true,
+    "expected_row_count": 891068,
+    "expected_count_matches": true,
+    "passed": true
+  }
+}

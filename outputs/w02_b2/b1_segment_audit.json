@@ -1,0 +1,62 @@
+{
+  "scope": "Full parsed four CSVs; gap/tail equivalence only, not full leakage audit",
+  "files": {
+    "DoS_dataset.csv": {
+      "parsed_rows": 3665771,
+      "tail_rows": 891068,
+      "gaps": [
+        {
+          "source_line": 2774703,
+          "timestamp": 1478200727.41947,
+          "delta": 22.358267068862915
+        }
+      ],
+      "segment0_vs_non_tail_mismatches": 0,
+      "tail_attack_rows": 0,
+      "passed": true
+    },
+    "Fuzzy_dataset.csv": {
+      "parsed_rows": 3838860,
+      "tail_rows": 891068,
+      "gaps": [
+        {
+          "source_line": 2947792,
+          "timestamp": 1478200727.41947,
+          "delta": 2539.4823081493378
+        }
+      ],
+      "segment0_vs_non_tail_mismatches": 0,
+      "tail_attack_rows": 0,
+      "passed": true
+    },
+    "RPM_dataset.csv": {
+      "parsed_rows": 4621702,
+      "tail_rows": 891068,
+      "gaps": [
+        {
+          "source_line": 3730634,
+          "timestamp": 1478200727.41947,
+          "delta": 7744.934786081314
+        }
+      ],
+      "segment0_vs_non_tail_mismatches": 0,
+      "tail_attack_rows": 0,
+      "passed": true
+    },
+    "gear_dataset.csv": {
+      "parsed_rows": 4443142,
+      "tail_rows": 891068,
+      "gaps": [
+        {
+          "source_line": 3552074,
+          "timestamp": 1478200727.41947,
+          "delta": 5588.125844955444
+        }
+      ],
+      "segment0_vs_non_tail_mismatches": 0,
+      "tail_attack_rows": 0,
+      "passed": true
+    }
+  },
+  "passed": true
+}
