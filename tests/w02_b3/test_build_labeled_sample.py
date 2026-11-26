@@ -1,7 +1,9 @@
 import csv, json, shutil, subprocess, sys, tempfile, unittest
 from pathlib import Path
 
-ROOT=Path(__file__).parents[1]; SCRIPT=ROOT/'scripts'/'build_labeled_sample.py'; FIX=ROOT/'tests'/'fixtures'/'raw'
+ROOT = Path(__file__).parents[2]
+SCRIPT = ROOT / "scripts" / "w02_b3" / "build_labeled_sample.py"
+FIX = ROOT / "tests" / "w02_b3" / "fixtures" / "raw"
 class SampleTests(unittest.TestCase):
  def build(self, seed=42):
   out=Path(tempfile.mkdtemp()); subprocess.run([sys.executable,str(SCRIPT),'--data-dir',str(FIX),'--output-dir',str(out),'--seed',str(seed),'--per-stratum','1'],check=True); return out
