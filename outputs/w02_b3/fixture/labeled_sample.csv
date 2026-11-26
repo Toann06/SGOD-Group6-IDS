@@ -1,0 +1,7 @@
+timestamp,can_id,dlc,data_0,data_1,data_2,data_3,data_4,data_5,data_6,data_7,flag_raw,label,attack_type,source_file,source_line,label_provenance,segment_id
+4.0,0003,2,00,0d,,,,,,,R,0,normal,Fuzzy_dataset.csv,2,observed_flag,0
+7.0,0123,2,00,10,,,,,,,,0,normal,normal_run_data.txt,1,inferred_from_source,0
+2.0,0000,2,00,0c,,,,,,,T,1,dos,DoS_dataset.csv,3,observed_flag,0
+3.0,00df,5,00,01,02,03,04,,,,T,1,fuzzy,Fuzzy_dataset.csv,1,observed_flag,0
+5.0,043f,2,00,0e,,,,,,,T,1,gear,gear_dataset.csv,1,observed_flag,0
+6.0,0316,2,00,0f,,,,,,,T,1,rpm,RPM_dataset.csv,1,observed_flag,0
