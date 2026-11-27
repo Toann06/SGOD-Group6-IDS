@@ -4,11 +4,29 @@ Dự án xây dựng Hệ thống Phát hiện Xâm nhập (IDS) trên mạng ph
 
 ---
 
-## Cấu trúc thư mục khởi tạo
+## Cấu trúc thư mục dự án
 
 ```text
 SGOD-Group6-IDS/
-├── Dockerfile          # Cấu hình đóng gói môi trường chạy dự án bằng Docker
-├── requirements.txt    # Danh sách các thư viện Python cần thiết
-├── .gitignore          # Các file/thư mục bỏ qua khi đẩy code lên Git
-└── README.md           # Tài liệu hướng dẫn tổng quan và cài đặt dự án
+├── configs/            # Cấu hình thí nghiệm và pipeline
+├── data/               # Dữ liệu thô, đã xử lý và chia theo client
+│   ├── raw/
+│   ├── processed/
+│   └── clients/
+├── src/                # Mã nguồn xử lý dữ liệu và tiện ích cốt lõi
+├── models/             # Kiến trúc mô hình IDS
+├── training/           # Huấn luyện và đánh giá mô hình
+├── federated/          # Logic Federated Learning và tổng hợp
+├── blockchain/         # Hợp đồng thông minh và xác thực sổ cái
+│   └── contracts/
+├── security/           # Tiện ích bảo mật và toàn vẹn dữ liệu
+├── infrastructure/     # Dockerfile và cấu hình hạ tầng
+├── tests/              # Kiểm thử đơn vị và smoke test
+├── checkpoints/        # Trọng số mô hình đã lưu
+├── results/            # Kết quả đánh giá và log
+├── docs/               # Tài liệu kỹ thuật và bàn giao
+├── reports/            # Báo cáo theo giai đoạn
+├── compose.yaml        # Điều phối dịch vụ container
+├── requirements.txt    # Danh sách thư viện Python
+├── .gitignore          # Các file/thư mục bỏ qua khi đẩy Git
+└── README.md           # Tài liệu hướng dẫn tổng quan dự án
