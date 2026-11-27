@@ -1,0 +1,6 @@
+dataset,total,valid,invalid,error_rate_percent
+DoS,3665771,3665771,0,0.0
+Fuzzy,3838860,3838860,0,0.0
+Gear,4443142,4443142,0,0.0
+RPM,4621702,4621702,0,0.0
+Normal,988872,988871,1,0.0001
