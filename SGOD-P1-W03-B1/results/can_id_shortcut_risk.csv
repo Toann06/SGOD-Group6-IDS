@@ -1,0 +1,5 @@
+file,ids_total,ids_attack_only,attack_rows_in_attack_only_ids,pct_attack_covered_by_attack_only_ids,ids_mixed,top_attack_ids
+DoS_dataset.csv,27,1,587521,100.0,0,0000:587521;0130:0;0002:0
+Fuzzy_dataset.csv,2048,2010,482491,98.1,38,0322:294;01e1:293;0502:293
+gear_dataset.csv,26,0,0,0.0,1,043f:597252;0316:0;018f:0
+RPM_dataset.csv,26,0,0,0.0,1,0316:654897;018f:0;0002:0

@@ -1,0 +1,30 @@
+{
+  "DoS_dataset.csv": {
+    "tail_start_line_expected": 2774704,
+    "gap_line_found": [
+      2774704
+    ],
+    "tail_sha256": "262ef366bb19f322fa1fa415e5360d5b33cf242462841b1f2ad1faf464541fec"
+  },
+  "Fuzzy_dataset.csv": {
+    "tail_start_line_expected": 2947793,
+    "gap_line_found": [
+      2947793
+    ],
+    "tail_sha256": "262ef366bb19f322fa1fa415e5360d5b33cf242462841b1f2ad1faf464541fec"
+  },
+  "gear_dataset.csv": {
+    "tail_start_line_expected": 3552075,
+    "gap_line_found": [
+      3552075
+    ],
+    "tail_sha256": "262ef366bb19f322fa1fa415e5360d5b33cf242462841b1f2ad1faf464541fec"
+  },
+  "RPM_dataset.csv": {
+    "tail_start_line_expected": 3730635,
+    "gap_line_found": [
+      3730635
+    ],
+    "tail_sha256": "262ef366bb19f322fa1fa415e5360d5b33cf242462841b1f2ad1faf464541fec"
+  }
+}

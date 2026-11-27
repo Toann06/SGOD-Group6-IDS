@@ -1,0 +1,6 @@
+file,lines_read,valid,invalid,normal_0,attack_1,attack_pct,unique_can_id,max_can_id_int,ts_backwards,ts_equal_adjacent,gaps_gt_1s,label_provenance
+DoS_dataset.csv,3665771,3665771,0,3078250,587521,16.03,27,1680,0,0,1,observed_flag
+Fuzzy_dataset.csv,3838860,3838860,0,3347013,491847,12.81,2048,2047,0,0,1,observed_flag
+gear_dataset.csv,4443142,4443142,0,3845890,597252,13.44,26,1680,0,0,1,observed_flag
+RPM_dataset.csv,4621702,4621702,0,3966805,654897,14.17,26,1680,0,0,1,observed_flag
+normal_run_data.txt,988872,988871,1,988871,0,,27,1680,0,0,0,inferred_from_source
