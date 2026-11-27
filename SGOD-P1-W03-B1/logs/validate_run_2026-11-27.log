@@ -1,0 +1,28 @@
+[PASS] V00 Du 5 file nguon 
+[PASS] V01 SHA-256 DoS_dataset.csv 09bf3136647b1d84...
+[PASS] V01 SHA-256 Fuzzy_dataset.csv a0e78dff6365a1ad...
+[PASS] V01 SHA-256 gear_dataset.csv b4eba43605fff337...
+[PASS] V01 SHA-256 RPM_dataset.csv 6718c6cb0a5fe6bd...
+[PASS] V01 SHA-256 normal_run_data.txt efbbafbf8e965c0d...
+... doc DoS_dataset.csv
+... doc Fuzzy_dataset.csv
+... doc gear_dataset.csv
+... doc RPM_dataset.csv
+... doc normal_run_data.txt
+[PASS] V02 Cau truc dong hop le DoS_dataset.csv 0 dong loi {}
+[PASS] V02 Cau truc dong hop le Fuzzy_dataset.csv 0 dong loi {}
+[PASS] V02 Cau truc dong hop le gear_dataset.csv 0 dong loi {}
+[PASS] V02 Cau truc dong hop le RPM_dataset.csv 0 dong loi {}
+[PASS] V02 Cau truc dong hop le normal_run_data.txt 1 dong loi {'invalid_normal_format': 1}
+[PASS] V03 Nhan chi gom {0,1} 
+[PASS] V04 DLC trong 0..8 (tat ca ban ghi hop le) 
+[PASS] V05 Tap DLC thuc te [2, 5, 6, 8]
+[PASS] V06 CAN ID 11-bit (<= 0x7FF) o moi file {'DoS_dataset.csv': '0x690', 'Fuzzy_dataset.csv': '0x7ff', 'gear_dataset.csv': '0x690', 'RPM_dataset.csv': '0x690', 'normal_run_data.txt': '0x690'}
+[PASS] V07 Timestamp khong giam {}
+[PASS] V08 Moi CSV co dung 1 gap > 1s {'DoS_dataset.csv': 1, 'Fuzzy_dataset.csv': 1, 'gear_dataset.csv': 1, 'RPM_dataset.csv': 1}
+[PASS] V09 Doan duoi 891.068 dong giong het o 4 CSV (hash) so hash khac nhau: 1
+[PASS] V10 Doan duoi khong chua attack (T) so T trong doan duoi: 0
+[PASS] V11 DoS: moi nhan T co CAN ID 0000 587521/587521
+[PASS] V12 CAN ID giu chuoi hex co so 0 dan dau (do dai 4) {'DoS_dataset.csv': {4: 27}, 'Fuzzy_dataset.csv': {4: 2086}, 'gear_dataset.csv': {4: 27}, 'RPM_dataset.csv': {4: 27}, 'normal_run_data.txt': {4: 27}}
+
+TONG: 21 PASS, 0 FAIL
