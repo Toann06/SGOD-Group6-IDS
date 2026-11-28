@@ -1,0 +1,127 @@
+{
+  "artifact": "C2 Week2 A2 v1.2 integrated CAN loader/feature/tensor pipeline",
+  "version": "0.3.0",
+  "input": "data\\b3_handoff\\labeled_sample.csv",
+  "rows": 18,
+  "schema_validation": {
+    "schema_match": true,
+    "missing_schema_columns": [],
+    "rows": 18,
+    "columns": 18,
+    "invalid_dlc_rows": 0,
+    "invalid_label_rows": 0,
+    "label_counts": {
+      "0": 6,
+      "1": 12
+    },
+    "attack_type_counts": {
+      "dos": 3,
+      "fuzzy": 3,
+      "gear": 3,
+      "normal": 6,
+      "rpm": 3
+    },
+    "missing_values_total": 0,
+    "missing_values_by_column": {}
+  },
+  "profile": "b2_baseline_a_23",
+  "profile_status": "PENDING_APPROVAL (DEC-007/DEC-009)",
+  "schema_version": "1.0.0",
+  "feature_order": [
+    "can_id_int",
+    "dlc",
+    "data_0",
+    "data_1",
+    "data_2",
+    "data_3",
+    "data_4",
+    "data_5",
+    "data_6",
+    "data_7",
+    "payload_mask_0",
+    "payload_mask_1",
+    "payload_mask_2",
+    "payload_mask_3",
+    "payload_mask_4",
+    "payload_mask_5",
+    "payload_mask_6",
+    "payload_mask_7",
+    "inter_arrival_time",
+    "global_iat",
+    "can_id_freq_1s",
+    "rolling_mean_iat",
+    "rolling_std_iat"
+  ],
+  "n_features": 23,
+  "label_mode": "binary",
+  "label_mapping": {
+    "mode": "binary",
+    "mapping": {
+      "Normal": 0,
+      "Attack": 1
+    },
+    "source_column": "label"
+  },
+  "label_counts": {
+    "0": 6,
+    "1": 12
+  },
+  "X_dtype": "float32",
+  "X_shape": [
+    18,
+    23
+  ],
+  "y_dtype": "int64",
+  "y_shape": [
+    18
+  ],
+  "nan_inf_before_fill": 72,
+  "nan_policy": "Temporal profiles: fill undefined temporal features with 0 (PROVISIONAL); frame profile requires finite values; no scaler fitted.",
+  "payload_encoding": "hex (explicit; leading zero hex preserved at read)",
+  "batch_size": 8,
+  "n_batches": 3,
+  "batches": [
+    {
+      "batch": 1,
+      "rows": 8,
+      "X_shape": [
+        8,
+        23
+      ],
+      "y_shape": [
+        8
+      ]
+    },
+    {
+      "batch": 2,
+      "rows": 8,
+      "X_shape": [
+        8,
+        23
+      ],
+      "y_shape": [
+        8
+      ]
+    },
+    {
+      "batch": 3,
+      "rows": 2,
+      "X_shape": [
+        2,
+        23
+      ],
+      "y_shape": [
+        2
+      ]
+    }
+  ],
+  "leakage_check": "PASS - label and metadata excluded from X",
+  "temporal_fixture_caveat": "B3 handoff is stratified 18-row sample, not chronological corpus. Temporal profiles are smoke-test only; do not use for training/quality metrics.",
+  "split_scaling_status": "NOT IMPLEMENTED - awaiting B2/A3 approved split and train-only scaling contract.",
+  "handover_integrity": "VERIFIED - SHA-256 matches after CRLF normalization.",
+  "manifest_integrity": {
+    "expected_sha256": "42232f553ec5012e1de7b956b38a4825906991e3566955be52f2a5b7d18c8913",
+    "actual_sha256": "42232f553ec5012e1de7b956b38a4825906991e3566955be52f2a5b7d18c8913",
+    "matches": true
+  }
+}

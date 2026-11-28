@@ -1,0 +1,73 @@
+{
+  "artifact": "SGOD-P1-W02-B3 labeled sample",
+  "seed": 42,
+  "per_stratum": 3,
+  "mandatory_b2_columns": [
+    "timestamp",
+    "can_id",
+    "dlc",
+    "data_0",
+    "data_1",
+    "data_2",
+    "data_3",
+    "data_4",
+    "data_5",
+    "data_6",
+    "data_7",
+    "flag_raw",
+    "label",
+    "attack_type",
+    "source_file",
+    "source_line"
+  ],
+  "optional_metadata": [
+    "label_provenance",
+    "segment_id"
+  ],
+  "shared_tail_policy": "exclude (PROPOSED; DEC-002 pending approval)",
+  "shared_tail_range": [
+    "1478200727.419470",
+    "1478201209.058944"
+  ],
+  "source_files": [
+    {
+      "file": "DoS_dataset.csv",
+      "sha256": "09bf3136647b1d846d13c374f26208f06ffeba18369093fc57c8076fc56b795e"
+    },
+    {
+      "file": "Fuzzy_dataset.csv",
+      "sha256": "a0e78dff6365a1ad3d314973f1ac5879b57f9b80c40eb07b1e3bbe4aeddaecfe"
+    },
+    {
+      "file": "gear_dataset.csv",
+      "sha256": "b4eba43605fff337117ff30e13c33f63b56eec3b00927c8bccb31192df3bee23"
+    },
+    {
+      "file": "normal_run_data.txt",
+      "sha256": "efbbafbf8e965c0d2f75eb97f1d118d0ae1c4b9f3077a6c4c000a26eb5be97ea"
+    },
+    {
+      "file": "RPM_dataset.csv",
+      "sha256": "6718c6cb0a5fe6bdf0e966a680f1d6d7d79c063d603254d6118c16aaeb74974d"
+    }
+  ],
+  "rows": 18,
+  "selected_by_stratum": {
+    "normal_observed": 3,
+    "normal_inferred": 3,
+    "dos": 3,
+    "fuzzy": 3,
+    "gear": 3,
+    "rpm": 3
+  },
+  "eligible_seen_by_stratum": {
+    "normal_observed": 10673686,
+    "dos": 587521,
+    "fuzzy": 491847,
+    "gear": 597252,
+    "normal_inferred": 988871,
+    "rpm": 654897
+  },
+  "malformed_policy": "skip and log upstream; never repair",
+  "sample_sha256": "42232f553ec5012e1de7b956b38a4825906991e3566955be52f2a5b7d18c8913"
+}
