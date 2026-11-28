@@ -1,0 +1,4 @@
+Timestamp: 5.000000 ID: 0123 000 DLC: 2 00 10
+Timestamp: 5.000001
+Timestamp: 5.000002 ID: 0123 000 DLC: 2 00
+Timestamp: 5.000003 ID: 0123 000 DLC: 0
