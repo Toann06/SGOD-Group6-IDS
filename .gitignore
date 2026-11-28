@@ -221,3 +221,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# C1: local HCRL inputs and generated runs
+/data/raw/*_dataset.csv
+/data/raw/normal_run_data.txt
+/data/processed/w02_c1*/
+/data/processed/.c1-*/
